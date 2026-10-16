@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Level 2 – Hong Kong Daily Temperature</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- d3 is loaded as a global; the page's own code is split into ES modules under js/ -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script type="module" src="js/level2.js"></script>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">Home</a> · <a href="level1.html">← Level 1</a></nav>
+    <h1>Hong Kong Daily Temperature by Month, <span id="year-range"></span></h1>
+    <p class="description">
+      Each cell is one month, coloured by the month's highest daily maximum or lowest daily
+      minimum. The lines inside show every day of the month: green is the daily maximum and
+      light blue the daily minimum. Hover a cell for its values; click a cell or use the
+      buttons to switch the colour between max and min.
+    </p>
+    <div id="mode-toggle" class="mode-toggle" role="group" aria-label="Temperature shown"></div>
+  </header>
+  <main id="chart"></main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* Shared styles for both levels. */
+
+:root {
+  --text-color: #222;
+  --muted-text-color: #555;
+  --border-color: #ccc;
+  --button-background: #f7f7f7;
+  --error-color: #b00020;
+}
+
+body {
+  margin: 0;
+  padding: 16px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background: #fff;
+}
+
+/* ---------- Page header ---------- */
+
+nav {
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 8px 0 4px;
+}
+
+.description {
+  max-width: 760px;
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--muted-text-color);
+}
+
+/* ---------- Max / Min toggle ---------- */
+
+.mode-toggle {
+  display: inline-flex;
+  margin-bottom: 8px;
+}
+
+.mode-button {
+  padding: 5px 12px;
+  font-size: 13px;
+  border: 1px solid var(--border-color);
+  background: var(--button-background);
+  cursor: pointer;
+}
+
+.mode-button + .mode-button {
+  border-left: none;
+}
+
+.mode-button.active {
+  background: var(--text-color);
+  border-color: var(--text-color);
+  color: #fff;
+}
+
+/* ---------- Chart ---------- */
+
+#chart {
+  overflow-x: auto;
+}
+
+.axis text {
+  font-size: 11px;
+}
+
+.cell {
+  cursor: pointer;
+}
+
+.cell:hover .cell-background {
+  stroke: #333;
+  stroke-width: 1.5;
+}
+
+.sparkline {
+  fill: none;
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+
+.legend text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12px;
+}
+
+/* ---------- Tooltip ---------- */
+
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+.error {
+  color: var(--error-color);
+}
